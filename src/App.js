@@ -5,14 +5,9 @@ import {
   Text,
   Animated,
   View,
-  Image,
-  Button,
-  TouchableOpacity,
-  ScrollView
+  TouchableOpacity
 } from "react-native";
-let wi = require("./imag/thumbs-up.png");
 let height = Dimensions.get("window").height;
-let width = Dimensions.get("window").width;
 
 export default class App extends Component {
   constructor() {
@@ -21,9 +16,7 @@ export default class App extends Component {
       Anim: new Animated.Value(0),
       ready: false,
       SlideInUp: new Animated.Value(0),
-      op: new Animated.Value(0),
-      butClick: "123",
-      wifi: wi
+      op: new Animated.Value(0)
     };
     this.click = this.click.bind(this);
   }
@@ -125,7 +118,6 @@ let stst = StyleSheet.create({
     alignItems: "center"
   },
   back: {
-    // flex: 1,
     justifyContent: "space-around",
     flexDirection: "row",
     shadowOffset: {
@@ -138,7 +130,6 @@ let stst = StyleSheet.create({
     borderRadius: 10,
     margin: 20,
     backgroundColor: "#383838"
-    // width:110
   },
   bColor: {
     height: height,
